@@ -1,0 +1,38 @@
+# 🔹 Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 🔹 Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# 🔹 Virtual environment
+env/
+venv/
+aerial_env/
+
+# 🔹 System files
+.DS_Store
+Thumbs.db
+
+# 🔹 Large model files (VERY IMPORTANT)
+*.keras
+*.h5
+*.pt
+*.pth
+
+# 🔹 Dataset (optional but recommended to exclude if large)
+classification_dataset/
+
+# 🔹 Logs & temp files
+*.log
+temp/
+tmp/
+
+# 🔹 VS Code settings (optional)
+.vscode/
+
+# 🔹 Streamlit cache
+.streamlit/
+
