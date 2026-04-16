@@ -30,7 +30,7 @@ st.markdown("Upload an image or use your camera to classify the object.")
 # 4. Load Model
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("best_tl_model.h5")
+    return tf.keras.models.load_model("best_tl_model.h5", compile=False)
 
 model = load_model()
 
