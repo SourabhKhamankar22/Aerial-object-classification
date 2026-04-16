@@ -121,9 +121,15 @@ streamlit run app.py
 
 ## 📁 Repository Structure
 ```
-├── classification_model.ipynb   # MobileNetV2 & Custom CNN Training Pipeline
-├── app.py                       # Streamlit UI Application code
-├── best_custom_cnn.keras (not included due to size)          # Saved weights for the best classification model
-├── requirements.txt             # Python dependencies
-└── README.md                    # Project documentation
+Aerial-object-classification/
+├── assets/                                         # Images used in README (UI, results, etc.)
+├── Aerial Object detection mobilenetv2.ipynb       # Training notebook (CNN + MobileNetV2)
+├── app.py                                          # Streamlit web application
+├── best_tl_model.h5                                # Saved Transfer Learning model (HDF5 format)
+├── best_tl_model.keras                             # Saved model in Keras format
+├── model.weights.h5                                # Lightweight model weights (used in deployment)
+├── Report.pdf                                      # Project report documentation
+├── requirements.txt                                # Dependencies for deployment
+├── .gitignore                                      # Ignored files configuration
+└── README.md                                       # Project documentation
 ```
