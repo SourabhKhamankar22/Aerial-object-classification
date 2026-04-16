@@ -74,7 +74,9 @@ The **Transfer Learning (MobileNetV2)** architecture proved highly superior for 
 ![Predictions](assets/predictions.png)
 
 ### 🔹 Streamlit App UI
-![App Screenshot](add_image_path_here)
+![App Screenshot](assets/ui%20app%201.png)
+![App Screenshot](assets/ui%20app%202.png)
+![App Screenshot](assets/ui%20app%203.png)
 
 **Conclusion:** This project successfully demonstrates that Transfer Learning architectures (like MobileNetV2) are highly viable for commercial security, aviation safety, and wildlife monitoring classification systems.
 
