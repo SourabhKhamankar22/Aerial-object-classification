@@ -14,7 +14,7 @@ Developed as a Master's Capstone Project (M.Sc. Data Science, MIT-WPU), this sys
 ## 🌐 Live Application
 The classification model has been deployed as an interactive web application, allowing users to upload images or use live camera feeds for real-time inference.
 
-🔗 **[Click Here to Try the Live Streamlit App](INSERT_YOUR_STREAMLIT_CLOUD_LINK_HERE)**
+🔗 **[Click Here to Try the Live Streamlit App](https://aerial-object-classification-jg7wa5b8ta49fpxpitqzhm.streamlit.app/)**
 
 ---
 
