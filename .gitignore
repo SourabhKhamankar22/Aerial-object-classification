@@ -18,7 +18,6 @@ Thumbs.db
 
 # 🔹 Large model files (VERY IMPORTANT)
 best_custom_cnn.keras
-*.h5
 *.pt
 *.pth
 
