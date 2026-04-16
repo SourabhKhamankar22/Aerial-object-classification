@@ -10,6 +10,15 @@ The rapid increase in drone usage has introduced significant challenges in airsp
 Developed as a Master's Capstone Project (M.Sc. Data Science, MIT-WPU), this system features a high-accuracy image classification pipeline utilizing Transfer Learning (MobileNetV2) to deliver real-time inference.
 
 ---
+## ✨ Key Features
+
+- 🔍 Real-time aerial image classification (Bird vs Drone)
+- 📸 Supports image upload and camera input
+- ⚡ Fast inference using MobileNetV2
+- 📊 Confidence scores with visual breakdown
+- 🌐 Deployed on Streamlit Cloud
+- 🧠 Transfer Learning-based architecture
+---
 
 ## 🌐 Live Application
 The classification model has been deployed as an interactive web application, allowing users to upload images or use live camera feeds for real-time inference.
@@ -65,6 +74,8 @@ The **Transfer Learning (MobileNetV2)** architecture proved highly superior for 
 * **Confusion Matrix:** Only 6 misclassifications out of 215 test images.
 * **ROC-AUC:** Perfect 1.00 area under the curve, proving exceptional class separability.
 
+> ⚠️ Note: Model weights are not included in this repository due to size limitations.  
+> The application uses pre-trained weights loaded during deployment.
 ## 📸 Sample Results
 
 ### 🔹 Confusion Matrix
@@ -74,10 +85,11 @@ The **Transfer Learning (MobileNetV2)** architecture proved highly superior for 
 ![Predictions](assets/predictions.png)
 
 ### 🔹 Streamlit App UI
-![App Screenshot](assets/ui%20app%201.png)
-![App Screenshot](assets/ui%20app%202.png)
-![App Screenshot](assets/ui%20app%203.png)
-
+<p align="center">
+  <img src="assets/ui app 1.png" width="30%">
+  <img src="assets/ui app 2.png" width="30%">
+  <img src="assets/ui app 3.png" width="30%">
+</p>
 **Conclusion:** This project successfully demonstrates that Transfer Learning architectures (like MobileNetV2) are highly viable for commercial security, aviation safety, and wildlife monitoring classification systems.
 
 ---
@@ -91,8 +103,8 @@ The **Transfer Learning (MobileNetV2)** architecture proved highly superior for 
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/yourusername/aerial-object-classifier.git](https://github.com/yourusername/aerial-object-classifier.git)
-cd aerial-object-classifier
+git clone https://github.com/SourabhKhamankar22/Aerial-object-classification
+cd Aerial-object-classifier
 ```
 
 ### 2. Create a virtual environment & install dependencies
@@ -111,7 +123,7 @@ streamlit run app.py
 ```
 ├── classification_model.ipynb   # MobileNetV2 & Custom CNN Training Pipeline
 ├── app.py                       # Streamlit UI Application code
-├── best_tl_model.keras (not included due to size)          # Saved weights for the best classification model
+├── best_custom_cnn.keras (not included due to size)          # Saved weights for the best classification model
 ├── requirements.txt             # Python dependencies
 └── README.md                    # Project documentation
 ```
