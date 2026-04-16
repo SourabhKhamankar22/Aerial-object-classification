@@ -17,7 +17,7 @@ aerial_env/
 Thumbs.db
 
 # 🔹 Large model files (VERY IMPORTANT)
-best_custom_cnn.keras
+*.keras
 *.pt
 *.pth
 
