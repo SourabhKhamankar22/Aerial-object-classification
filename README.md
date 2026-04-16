@@ -1,4 +1,4 @@
-# 🚁 Aerial Object Classification AI (Bird vs. Drone)
+#  Aerial Object Classification AI (Bird vs. Drone)
 
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
@@ -7,7 +7,7 @@
 ## 📌 Project Overview
 The rapid increase in drone usage has introduced significant challenges in airspace management, security surveillance, and wildlife protection. This deep learning project provides a robust computer vision solution capable of accurately differentiating between **Birds** and **Drones** in real-world aerial imagery.
 
-Developed as a Master's Capstone Project (M.Sc. Data Science, MIT-WPU), this system features a high-accuracy image classification pipeline utilizing Transfer Learning (MobileNetV2) to deliver real-time inference.
+Developed a Capstone Project this system features a high-accuracy image classification pipeline utilizing Transfer Learning (MobileNetV2) to deliver real-time inference.
 
 ---
 ## ✨ Key Features
