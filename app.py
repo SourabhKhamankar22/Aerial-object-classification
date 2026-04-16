@@ -1,5 +1,8 @@
+from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
+from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
+from tensorflow.keras.models import Model
 import streamlit as st
-import tensorflow as tf
 import numpy as np
 from PIL import Image
 
@@ -30,9 +33,25 @@ st.markdown("Upload an image or use your camera to classify the object.")
 # 4. Load Model
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("best_tl_model.h5", compile=False)
+    base_model = MobileNetV2(weights=None, include_top=False, input_shape=(224,224,3))
 
+    x = base_model.output
+    x = GlobalAveragePooling2D()(x)
+    x = Dense(128, activation='relu')(x)
+    predictions = Dense(1, activation='sigmoid')(x)
+
+    model = Model(inputs=base_model.input, outputs=predictions)
+
+    try:
+        model.load_weights("model.weights.h5")
+        return model  # 
+    except Exception as e:
+        st.error(f"Model loading failed: {e}")
+        return None  # 
 model = load_model()
+if model is None:
+    st.error("Model failed to load. Please check weights file.")
+    st.stop()
 
 # ✅ Explicit class mapping 
 CLASS_INDICES = {'bird': 0, 'drone': 1}
@@ -69,12 +88,14 @@ if final_image_file is not None:
         # Preprocessing
         image = image.convert('RGB')
         img = image.resize((224, 224))
-        img_array = np.array(img) / 255.0
+
+        img_array = np.array(img)
+        img_array = preprocess_input(img_array)
         img_array = np.expand_dims(img_array, axis=0)
 
         # Prediction
         with st.spinner("Analyzing image..."):
-            prediction = model.predict(img_array)
+            prediction = model.predict(img_array, verbose=0)
 
         #  Handle Binary Output
         if prediction.shape[1] == 1:
